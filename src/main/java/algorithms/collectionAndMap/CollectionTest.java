@@ -28,7 +28,6 @@ public class CollectionTest {
         }
 
         //第三种遍历 使用迭代器进行相关遍历
-
         Iterator<String> ite=list.iterator();
         while(ite.hasNext())//判断下一个元素之后有值
         {
