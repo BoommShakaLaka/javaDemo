@@ -23,6 +23,4 @@ public class ExtendsTest {
         Fish fish = new Fish("write");
         fish.fishColour();
     }
-
-
 }
