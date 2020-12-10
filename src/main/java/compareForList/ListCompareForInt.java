@@ -56,22 +56,22 @@ public class ListCompareForInt {
     //对象集合取并集
     @Test
     public void test4(){
-        List<User> listA = new ArrayList<User>();
-        List<User> listB = new ArrayList<User>();
+        List<User1> listA = new ArrayList<User1>();
+        List<User1> listB = new ArrayList<User1>();
 
-        User user1 = new User("1", "a");
-        User user2 = new User("2", "b");
-        User user3 = new User("3", "c");
+        User1 user1 = new User1("1", "a");
+        User1 user12 = new User1("2", "b");
+        User1 user13 = new User1("3", "c");
 
         listA.add(user1);
-        listA.add(user2);
-        listB.add(user2);
-        listB.add(user3);
+        listA.add(user12);
+        listB.add(user12);
+        listB.add(user13);
 
         listA.removeAll(listB);
         listA.addAll(listB);
 
-        for(User u : listA) {
+        for(User1 u : listA) {
             System.out.println(u.getId() + ":" + u.getName());
         }
     }
@@ -79,22 +79,22 @@ public class ListCompareForInt {
     //对象集合取交集
     @Test
     public void test5(){
-        List<User> listA = new ArrayList<User>();
-        List<User> listB = new ArrayList<User>();
+        List<User1> listA = new ArrayList<User1>();
+        List<User1> listB = new ArrayList<User1>();
 
-        User user1 = new User("1", "a");
-        User user2 = new User("2", "b");
-        User user3 = new User("3", "c");
+        User1 user1 = new User1("1", "a");
+        User1 user12 = new User1("2", "b");
+        User1 user13 = new User1("3", "c");
 
         listA.add(user1);
-        listA.add(user2);
+        listA.add(user12);
 
-        listB.add(user2);
-        listB.add(user3);
+        listB.add(user12);
+        listB.add(user13);
 
         listA.retainAll(listB);
 
-        for(User u : listA) {
+        for(User1 u : listA) {
             System.out.println(u.getId() + ":" + u.getName());
         }
     }
@@ -102,22 +102,22 @@ public class ListCompareForInt {
     //对象集合取差集
     @Test
     public void test6(){
-        List<User> listA = new ArrayList<User>();
-        List<User> listB = new ArrayList<User>();
+        List<User1> listA = new ArrayList<User1>();
+        List<User1> listB = new ArrayList<User1>();
 
-        User user1 = new User("1", "a");
-        User user2 = new User("2", "b");
-        User user3 = new User("3", "c");
+        User1 user1 = new User1("1", "a");
+        User1 user12 = new User1("2", "b");
+        User1 user13 = new User1("3", "c");
 
         listA.add(user1);
-        listA.add(user2);
+        listA.add(user12);
 
-        listB.add(user2);
-        listB.add(user3);
+        listB.add(user12);
+        listB.add(user13);
 
         listA.removeAll(listB);
 
-        for(User u : listA) {
+        for(User1 u : listA) {
             System.out.println(u.getId() + ":" + u.getName());
         }
     }

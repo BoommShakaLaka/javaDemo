@@ -1,13 +1,9 @@
-import compareForList.User;
+import compareForList.User1;
 import org.junit.Test;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.Iterator;
-import java.util.List;
-import java.util.concurrent.TransferQueue;
+import java.util.*;
 
 public class TempTest {
     @Test
@@ -80,29 +76,29 @@ public class TempTest {
 
     @Test
     public void test8() {
-        User user = new User("1", "张三");
+        User1 user1 = new User1("1", "张三");
 
-        List<User> listold = new ArrayList<User>();
-        listold.add(user);
-        listold.add(user);
-        List<User> listnew = new ArrayList<User>();
+        List<User1> listold = new ArrayList<User1>();
+        listold.add(user1);
+        listold.add(user1);
+        List<User1> listnew = new ArrayList<User1>();
 //        listnew
 
     }
 
     @Test
     public void test9() {
-        User user1 = new User("1", "张三");
-        List<User> listold = new ArrayList<User>();
+        User1 user1 = new User1("1", "张三");
+        List<User1> listold = new ArrayList<User1>();
         listold.add(user1);
-        User user2 = new User("2", "张三");
-        listold.add(user2);
-        User user3 = new User("3", "张三");
-        listold.add(user3);
-        User user4 = new User("4", "张三");
-        listold.add(user4);
-        User user5 = new User("5", "张三");
-        listold.add(user5);
+        User1 user12 = new User1("2", "张三");
+        listold.add(user12);
+        User1 user13 = new User1("3", "张三");
+        listold.add(user13);
+        User1 user14 = new User1("4", "张三");
+        listold.add(user14);
+        User1 user15 = new User1("5", "张三");
+        listold.add(user15);
 //        for (User user1:listold){
 //            listold.remove(user1);
 //        }
@@ -112,10 +108,10 @@ public class TempTest {
 //            }
 //        }
 
-        Iterator<User> iterator = listold.iterator();
+        Iterator<User1> iterator = listold.iterator();
         int i = 0;
         while (iterator.hasNext()) {
-            User user = iterator.next();
+            User1 user = iterator.next();
             if (i % 2 == 0) {
                 iterator.remove();
             }
@@ -174,5 +170,114 @@ public class TempTest {
             System.out.println(2);
             return;
         }
+    }
+
+    @Test
+    public void test15() {
+        Integer a = 1;
+        Boolean b = test16(a);
+        System.out.println(a);
+
+
+    }
+
+    public Boolean test16(Integer a) {
+        return null;
+
+
+    }
+
+    @Test
+    public void test17() {
+        List<User1> list = new ArrayList<>();
+//        list = null;
+        if (list == null) {
+            System.out.println("null");
+        } else if (list.isEmpty()) {
+            System.out.println("空");
+        }
+        User1 user1 = test18();
+        if ("1".equals(user1.getId()) && user1 != null) {
+            System.out.println("success");
+        }
+    }
+
+
+    public User1 test18() {
+        return null;
+    }
+
+    @Test
+    public void test19() {
+        List<User1> list = new ArrayList<>();
+        test19_1(list);
+        System.out.printf("L");
+    }
+
+    private void test19_1(List<User1> list) {
+        User1 user1 = new User1("1", "z");
+        User1 user12 = new User1("2", "x");
+        list.add(user1);
+        list.add(user12);
+        return;
+    }
+
+    @Test
+    public void test20() {
+        test20_1();
+        System.out.println("234");
+    }
+
+    public void test20_1() {
+        List<User1> list = new ArrayList<>();
+        test19_1(list);
+        for (User1 user1 : list) {
+            return;
+        }
+        System.out.printf("");
+    }
+
+    @Test
+    public void test21() {
+        String s = "ABXS";
+        System.out.println(s.substring(0, 1));
+    }
+
+    private static final List<String> CG_LOCAT_START_CODE = Arrays.asList("J", "K", "L", "X", "Y", "Z");
+
+    @Test
+    public void test22_1() {
+        Boolean bl = test22("E0001");
+        System.out.print(bl);
+    }
+
+    public boolean test22(String local) {
+        String start1 = local.substring(0, 1);
+        String start2 = local.substring(0, 2);
+        return !CG_LOCAT_START_CODE.contains(start1) && !start2.equals("ZE");
+    }
+
+    @Test
+    public void test23() {
+        Long b = 1234L;
+        Long a = Long.getLong(String.valueOf(b));
+        System.out.println(a);
+    }
+
+    @Test
+    public void test24(){
+        List<User1> list1 = new ArrayList<>();
+        List<User1> list2 = new ArrayList<>();
+        List<User1> listAll = new ArrayList<>();
+        User1 user1 = new User1("1","aa");
+        User1 user12 = new User1("1","aa");
+        User1 user13 = new User1("1","aa");
+        list1.add(user1);
+        list1.add(user12);
+        list2.add(user13);
+        listAll.addAll(list1);
+        listAll.addAll(list2);
+        System.out.printf("");
+
     }
 }

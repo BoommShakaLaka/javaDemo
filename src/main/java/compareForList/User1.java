@@ -1,10 +1,10 @@
 package compareForList;
 
-public class User {
+public class User1 {
     private String id;
     private String name;
 
-    public User(String id, String name) {
+    public User1(String id, String name) {
         this.id = id;
         this.name = name;
     }
@@ -24,7 +24,7 @@ public class User {
 
     @Override
     public boolean equals(Object obj) {
-        User u = (User) obj;
+        User1 u = (User1) obj;
         return id.equals(u.getId()) && name.equals(u.getName());
     }
 
