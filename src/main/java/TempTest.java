@@ -1,6 +1,7 @@
 import compareForList.User1;
 import org.junit.Test;
 
+import javax.sound.midi.Soundbank;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -265,19 +266,56 @@ public class TempTest {
     }
 
     @Test
-    public void test24(){
+    public void test24() {
         List<User1> list1 = new ArrayList<>();
         List<User1> list2 = new ArrayList<>();
         List<User1> listAll = new ArrayList<>();
-        User1 user1 = new User1("1","aa");
-        User1 user12 = new User1("1","aa");
-        User1 user13 = new User1("1","aa");
+        User1 user1 = new User1("1", "aa");
+        User1 user12 = new User1("1", "aa");
+        User1 user13 = new User1("1", "aa");
         list1.add(user1);
         list1.add(user12);
         list2.add(user13);
         listAll.addAll(list1);
         listAll.addAll(list2);
         System.out.printf("");
-
     }
+
+    @Test
+    public void test25() {
+        FlagObject flagObject = new FlagObject();
+        flagObject.setFlag(true);
+        System.out.println(flagObject.getFlag());
+        test25_1(flagObject);
+        System.out.println(flagObject.getFlag());
+    }
+
+    public void test25_1(FlagObject flagObject) {
+        flagObject.setFlag(false);
+    }
+
+    @Test
+    public void test26() {
+        String x = "string";
+        String y = "string";
+        String z = new String("string");
+        System.out.println(x == y);
+        System.out.println(x == z);
+        System.out.println(x.equals(y));
+        System.out.println(x.equals(z));
+
+        System.out.println(x.hashCode() + " " + y.hashCode() + " " + z.hashCode());
+        System.out.println(System.identityHashCode(x) + " " + System.identityHashCode(y) + " " + System.identityHashCode(z));
+    }
+
+    @Test
+    public void test27() {
+        String str1 = "通话";
+        String str2 = "重地";
+        System.out.println(str1.hashCode() + " " + str2.hashCode());
+        System.out.println(String.format("str1：%d | str2：%d", str1.hashCode(), str2.hashCode()));
+        System.out.println(str1.equals(str2));
+    }
+
+
 }
