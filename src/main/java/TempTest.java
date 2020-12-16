@@ -321,4 +321,8 @@ public class TempTest {
     public void test28(){
         System.out.println(20201216);
     }
+
+    public void test28_1(){
+
+    }
 }
