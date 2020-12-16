@@ -322,7 +322,11 @@ public class TempTest {
         System.out.println(20201216);
     }
 
+
     public void test28_1(){
 
+
+    public void test28_2(){
+        System.out.printf("aaaa");
     }
 }
