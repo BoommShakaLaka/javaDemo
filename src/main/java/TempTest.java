@@ -1,7 +1,7 @@
 import compareForList.User1;
 import org.junit.Test;
 
-import javax.sound.midi.Soundbank;
+import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -318,16 +318,20 @@ public class TempTest {
     }
 
 
-//    20201216 01分支提交
+    @Test
+    public void test28() {
+        String TIMESTAMP_FORMAT = "yyyy-MM-dd HH:mm:ss";
+        DateFormat format = new SimpleDateFormat(TIMESTAMP_FORMAT);
+        try {
+            Date date = format.parse("2020-12-32 10:28:57");
+            System.out.println(date);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+    }
 
-//    20201216 02分支提交
-
-//    20201216 02合并后提交
-
-
-
-    //202012160001
-
-    //202012160002
-
+    @Test
+    public void test29() {
+        Arrays.asList(1, 2, 3, 4);
+    }
 }
