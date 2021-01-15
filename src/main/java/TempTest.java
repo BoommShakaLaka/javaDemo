@@ -6,6 +6,8 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
+import static java.lang.Thread.sleep;
+
 public class TempTest {
     @Test
     public void test() throws ParseException {
@@ -333,5 +335,17 @@ public class TempTest {
     @Test
     public void test29() {
         Arrays.asList(1, 2, 3, 4);
+    }
+
+    @Test
+    public void Test30() {
+        System.out.println("before");
+        try {
+            sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println("before");
+
     }
 }
