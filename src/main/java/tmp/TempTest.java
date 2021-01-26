@@ -1,6 +1,10 @@
+package tmp;
+
 import compareForList.User1;
 import org.junit.Test;
+import tmp.FlagObject;
 
+import java.math.BigDecimal;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -347,5 +351,10 @@ public class TempTest {
         }
         System.out.println("before");
 
+    }
+    @Test
+    public void test31() {
+        BigDecimal b = BigDecimal.valueOf(1);
+        System.out.println(b.abs());
     }
 }

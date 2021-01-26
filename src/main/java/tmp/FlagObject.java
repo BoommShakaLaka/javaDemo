@@ -1,3 +1,5 @@
+package tmp;
+
 import java.math.BigDecimal;
 
 public class FlagObject {
