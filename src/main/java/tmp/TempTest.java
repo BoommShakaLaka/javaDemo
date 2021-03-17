@@ -1,5 +1,6 @@
 package tmp;
 
+import com.sun.xml.internal.ws.util.StringUtils;
 import compareForList.User1;
 import org.junit.Test;
 import tmp.FlagObject;
@@ -352,9 +353,45 @@ public class TempTest {
         System.out.println("before");
 
     }
+
     @Test
     public void test31() {
         BigDecimal b = BigDecimal.valueOf(1);
         System.out.println(b.abs());
+    }
+
+    @Test
+    public void test32() {
+        int[] a = {2, 3, 7, 15};
+        int[] b = new int[2];
+        b = twoSum(a, 9);
+        System.out.println(b[0] + " " + b[1]);
+    }
+
+    public int[] twoSum(int[] nums, int target) {
+        int[] result = new int[2];
+        for (int i = 0; i < nums.length; i++) {
+            for (int j = 0; j < nums.length; j++) {
+                if ((j != i) && ((nums[i] + nums[j]) == target)) {
+                    result[0] = i;
+                    result[1] = j;
+                    return result;
+                }
+            }
+        }
+        return null;
+    }
+
+    @Test
+    public void test33() {
+        String s1 = "ABC";
+        String s2 = "ABCD";
+        String s3 = "AZZS";
+
+        if (!s1.equals(s2) && s3.startsWith("ZZ")) {
+            System.out.println(true);
+        } else {
+            System.out.println(false);
+        }
     }
 }
