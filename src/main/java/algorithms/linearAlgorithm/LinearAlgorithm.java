@@ -23,9 +23,9 @@ public class LinearAlgorithm {
     public static void main(String[] args) {
         Integer[] data1 = {12, 5, 67, 43, 16, 34, 78, 4, 18};
         String[] data2 = {"abc", "bbc", "ccc", "fdf", "ddd"};
-        Student[] data3 = {new Student("zhangsan"), new Student("lisi"), new Student("wangwu")};
+        Student[] data3 = {new Student("zhangsan",1), new Student("lisi",2), new Student("wangwu",3)};
 
-        Student student = new Student("lisi");
+        Student student = new Student("lisi",3);
         int re = LinearAlgorithm.search(data3, student);
         System.out.println(re);
     }

@@ -18,8 +18,8 @@ public class Test1 {
         time = time2 - time1;
         System.out.println(time / 1000000000.0);
 
-        for (int i = 0; i <100 ; i++) {
-            int result = LinearAlgorithm.search(data, num);
+        for (int i = 0; i < 100; i++) {
+            LinearAlgorithm.search(data, num);
         }
         long time3 = System.nanoTime();
         time = time3 - time2;

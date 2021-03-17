@@ -393,5 +393,7 @@ public class TempTest {
         } else {
             System.out.println(false);
         }
+
+        System.out.println(s3.compareTo(s2));
     }
 }
